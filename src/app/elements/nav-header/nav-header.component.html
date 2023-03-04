@@ -1,0 +1,13 @@
+<div class="nav-header">
+    <a [routerLink]="['/dashboard/withdraw']" class="brand-logo">
+      <!-- TODO cambiar el logo de grande a pequeño cuando se abre y se cierra -->
+      <img src="../../../assets/images/cft-logo-small.png" height="50" width="50">
+      <!-- <img src="../../../assets/images/cft-logo-large.png" height="51" width="192"> -->
+    </a>
+
+    <div class="nav-control">
+        <div [ngClass]="{'is-active': hamburgerClass, '': !hamburgerClass}" class="hamburger" (click)="toggleHamburgerClass()">
+            <span class="line"></span><span class="line"></span><span class="line"></span>
+        </div>
+    </div>
+</div>

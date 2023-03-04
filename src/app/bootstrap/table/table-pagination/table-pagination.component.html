@@ -1,0 +1,40 @@
+<div class="table-responsive">
+	<table class="table table-striped">
+	  <thead>
+	  <tr>
+		<th scope="col">#</th>
+		<th scope="col">Open Time</th>
+		<th scope="col">Close Time</th>
+		<th scope="col">Direction</th>
+		<th scope="col">Lots</th>
+		<th scope="col">Swap</th>
+		<th scope="col">Symbol</th>
+		<th scope="col">Commission</th>
+		<th scope="col">Profit</th>
+	  </tr>
+	  </thead>
+	  <tbody>
+	  <tr *ngFor="let trade of trades">
+		<th scope="row">{{ '#' + trade.id }}</th>
+		<td>{{ trade.open_time }}</td>
+		<td>{{ trade.close_time }}</td>
+		<td>{{ trade.direction }}</td>
+		<td>{{ trade.lots }}</td>
+		<td>{{ trade.swap }}</td>
+		<td>{{ trade.symbol }}</td>
+		<td>{{ trade.commission }}</td>
+		<td>{{ trade.profit }}</td>
+	  </tr>
+	  </tbody>
+	</table>
+</div>
+
+<div class="d-sm-flex d-block justify-content-between p-2">
+  <ngb-pagination class="pagination" [(page)]="page" [pageSize]="pageSize"></ngb-pagination>
+
+  <select class="custom-select" style="width: auto" [(ngModel)]="pageSize" (ngModelChange)="refreshTrades()">
+    <option [ngValue]="10">10 trades per page</option>
+    <option [ngValue]="20">20 trades per page</option>
+    <option [ngValue]="30">30 trades per page</option>
+  </select>
+</div>

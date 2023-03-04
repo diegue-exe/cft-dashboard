@@ -1,0 +1,28 @@
+<div class="deznav">
+    <div class="deznav-scroll" [perfectScrollbar]>
+        <ul class="metismenu" id="menu" metis-menu>
+          <li class="{{(currentHref == '/dashboard/index') ? 'mm-active' : ''}}">
+            <a [routerLink]="['/dashboard/index']" class="ai-icon {{(currentHref == '/dashboard/index') ? 'mm-active' : ''}}" aria-expanded="false">
+                <i class="flaticon-381-home-2"></i>
+                <span class="nav-text">Dashboard</span>
+            </a>
+        </li>
+        <li class="{{(currentHref == '/dashboard/profile') ? 'mm-active' : ''}}">
+          <a [routerLink]="['/dashboard/profile']" class="ai-icon {{(currentHref == '/dashboard/profile') ? 'mm-active' : ''}}" aria-expanded="false">
+              <i class="flaticon-381-user-7"></i>
+              <span class="nav-text">Profile</span>
+          </a>
+      </li>
+      <li class="{{(currentHref == '/dashboard/withdraw') ? 'mm-active' : ''}}">
+        <a [routerLink]="['/dashboard/withdraw']" class="ai-icon {{(currentHref == '/dashboard/withdraw') ? 'mm-active' : ''}}" aria-expanded="false">
+            <i class="flaticon-381-substract-1"></i>
+            <span class="nav-text">Withdraw</span>
+        </a>
+    </li>
+        </ul>
+        <div class="copyright mt-4">
+            <p><strong>Crypto Fund Trader Dashboard</strong> © 2023 All Rights Reserved</p>
+            <p class="fs-12">Made with <span [ngClass]="{'': toggleIcon, 'heart-blast': !toggleIcon}" class="heart" (click)="toggleLoveIcon()"></span> by <a href="https://github.com/diegue-exe">Diegue-exe</a></p>
+        </div>
+    </div>
+</div>

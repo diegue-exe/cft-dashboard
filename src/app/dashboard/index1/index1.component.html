@@ -1,0 +1,76 @@
+
+<!--**********************************
+    Content body start
+***********************************-->
+<div class="content-body">
+    <!-- row -->
+    <div class="container-fluid">
+        <div class="row">
+          <div class="col-xl-12">
+            <app-dashboard-carousel [data]="carouselData"></app-dashboard-carousel>
+          </div>
+
+          <!-- {{ cuentas[0] | json }} -->
+
+        <div class="col-xl-1"></div>
+            <div class="col-xl-5 col-lg-6 col-md-12 col-sm-12 col-12 d-flex justify-content-center">
+              <div class="card">
+                <div class="card-body d-flex align-items-center">
+                        <div>
+                          <h3 class="text-black">Winrate</h3>
+                            <p class="mb-2 fs-13">
+                            <h2 *ngIf="cuentas[this.current]" class="text-black mb-0 font-w600">{{ cuentas[this.current].win_rate }}%</h2>
+                        </div>
+                  <app-winrate-doughnut></app-winrate-doughnut>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-5 col-lg-6 col-md-12 col-sm-12 col-12">
+              <div class="card">
+                <div class="card-body d-flex align-items-center">
+                        <div>
+                          <h3 class="text-black">Otra</h3>
+                            <p class="mb-2 fs-13">
+                            <h2 class="text-black mb-0 font-w600">Tarjeta</h2>
+                        </div>
+                  <!-- <app-chartjs-doughnut></app-chartjs-doughnut> -->
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-1"></div>
+
+
+
+            <div class="col-xl-12 col-xxl-12">
+                <app-balance-area *ngIf="cuentas[this.current]" [current]="cuentas[this.current]"></app-balance-area>
+            </div>
+
+            <div class="col-xl-12">
+              <div class="card">
+                  <div class="card-header pb-0">
+                      <div class="mt-3 mt-sm-0">
+
+
+                          <ul class="nav nav-tabs" role="tablist" ngbNav #nav="ngbNav" >
+                              <li class="nav-item" ngbNavItem="navpills-1">
+                                  <a class="nav-link" data-toggle="tab" href="#navpills-1" role="tab" aria-selected="false" ngbNavLink>
+                                      MY TRADES
+                                  </a>
+                                  <ng-template ngbNavContent>
+                                    <app-dashboard-table [trades]="trades"></app-dashboard-table>
+                                </ng-template>
+                              </li>
+                          </ul>
+                      </div>
+                  </div>
+                  <div class="card-body ">
+                      <div [ngbNavOutlet]="nav" class=""></div>
+                  </div>
+              </div>
+          </div>
+        </div>
+    </div>
+</div>
+<!--**********************************
+    Content body end
+***********************************-->
