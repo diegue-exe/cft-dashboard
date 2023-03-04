@@ -736,6 +736,7 @@ import { BalanceAreaYearlyComponent } from './dashboard/balance-area-yearly/bala
 import { BalanceAreaAllComponent } from './dashboard/balance-area-all/balance-area-all.component';
 import { BalanceAreaWeekComponent } from './dashboard/balance-area-week/balance-area-week.component';
 import { WithdrawPageComponent } from './withdraw-page/withdraw-page.component';
+import { AuthGuard } from './auth.guard';
 
 
 
@@ -1461,6 +1462,7 @@ import { WithdrawPageComponent } from './withdraw-page/withdraw-page.component';
   providers: [
 		SharedService,
     AuthService,
+    AuthGuard
   ],
   bootstrap: [AppComponent]
 })
