@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DataService } from '../core/data.service';
 
 @Component({
   selector: 'app-withdraw-page',
@@ -7,10 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class WithdrawPageComponent implements OnInit {
 
-  constructor() { }
+  constructor(private dataService: DataService) { }
 
   withdraw(){
-    console.log("Withdraw")
+    console.log("Withdraw");
   }
 
   ngOnInit(): void {
