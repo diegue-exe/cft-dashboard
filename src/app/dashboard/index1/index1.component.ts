@@ -31,11 +31,11 @@ export class Index1Component implements OnInit {
       this.cuentas = data,
       sessionStorage.getItem('tradingAccount') != null ? this.current = parseInt(sessionStorage.getItem('tradingAccount') || "0")  : sessionStorage.setItem('tradingAccount', "0"),
       this.carouselData = [
-        { title: "Current balance", data: '$' + this.cuentas[this.current].balance },
-        { title: "Equity", data: '$' + this.cuentas[this.current].equity },
-        { title: "Days traded", data: this.cuentas[this.current].days_traded },
-        { title: "Daily Drawdown", data: '$' + this.cuentas[this.current].daily_drawdown },
-        { title: "Max Drawdown", data: '$' + this.cuentas[this.current].max_drawdown },
+        { title: "Current balance", subtitle: "Updated every minute" ,data: '$' + this.cuentas[this.current].balance },
+        { title: "Equity", subtitle:"Updated every minute", data: '$' + this.cuentas[this.current].equity },
+        { title: "Days traded", subtitle: "Updated every day at 12 AM (UTC)", data: this.cuentas[this.current].days_traded },
+        { title: "Daily Drawdown", subtitle: "Updated every day at 12 AM (UTC)", data: '$' + this.cuentas[this.current].daily_drawdown },
+        { title: "Max Drawdown", subtitle: "Static", data: '$' + this.cuentas[this.current].max_drawdown },
       ],
       this.dataService
       .getTrades(this.cuentas[this.current].mt_user_id)

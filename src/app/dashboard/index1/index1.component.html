@@ -12,8 +12,7 @@
 
           <!-- {{ cuentas[0] | json }} -->
 
-        <div class="col-xl-1"></div>
-            <div class="col-xl-5 col-lg-6 col-md-12 col-sm-12 col-12 d-flex justify-content-center">
+            <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12 d-flex justify-content-center">
               <div class="card">
                 <div class="card-body d-flex align-items-center">
                         <div>
@@ -25,19 +24,30 @@
                 </div>
               </div>
             </div>
-            <div class="col-xl-5 col-lg-6 col-md-12 col-sm-12 col-12">
+            <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12">
               <div class="card">
                 <div class="card-body d-flex align-items-center">
                         <div>
-                          <h3 class="text-black">Otra</h3>
-                            <p class="mb-2 fs-13">
-                            <h2 class="text-black mb-0 font-w600">Tarjeta</h2>
+                          <h3 class="text-black">Average return</h3>
+                            <p class="mb-2 fs-13">per trade</p>
+                            <h2 class="text-black mb-0 font-w600">${{ cuentas[this.current].avg_return_trade }}</h2>
                         </div>
                   <!-- <app-chartjs-doughnut></app-chartjs-doughnut> -->
                 </div>
               </div>
             </div>
-            <div class="col-xl-1"></div>
+            <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12">
+              <div class="card">
+                <div class="card-body d-flex align-items-center">
+                        <div>
+                          <h3 class="text-black">Total trades</h3>
+                            <p class="mb-2 fs-13">Lifetime</p>
+                              <h2 class="text-black mb-0 font-w600">{{ cuentas[this.current].total_trades }} trades</h2>
+                        </div>
+                  <!-- <app-chartjs-doughnut></app-chartjs-doughnut> -->
+                </div>
+              </div>
+            </div>
 
 
 

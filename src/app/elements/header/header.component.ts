@@ -30,7 +30,8 @@ export class HeaderComponent implements OnInit{
 	}
 
   logout(){
-    // TODO hacer el logout
+    sessionStorage.clear();
+    location.reload();
     console.log("Log out");
   }
 

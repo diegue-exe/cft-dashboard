@@ -67,13 +67,6 @@ export class DataService {
   }
 
   getBalances(mt_user_id:number, period: string){
-    // TODO, cuando le des al boton de daily, weekly, monthly, tienes que añadirle esto a la función
-    /*
-    goProducts() {
-      this.router.navigate(['/products'], { queryParams: { period: this.period} });
-      // En este caso, tienes que hacer que 1week sea una variable, que contenga un string '1week' como dice la api o similar
-    }
-    */
     const url = `${this.apiUrl}/trading_accounts/${mt_user_id}/balances`
     const token = sessionStorage.getItem('token');
     const httpHeaders = new HttpHeaders({

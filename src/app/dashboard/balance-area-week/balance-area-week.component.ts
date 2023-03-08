@@ -19,7 +19,7 @@ export class BalanceAreaWeekComponent implements OnInit {
 
   ngOnInit(): void {
       this.dataService
-      .getBalances(this.currentUser.mt_user_id, '1month')
+      .getBalances(this.currentUser.mt_user_id, '1week')
       .pipe(take(1))
       .subscribe(data => {
         data.map(data =>this.numericData.push(data.balance)),
