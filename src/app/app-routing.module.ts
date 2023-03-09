@@ -9,9 +9,7 @@ import { Index4Component } from './dashboard/index4/index4.component';
 
 import { CoinDetailsComponent } from './coin-details/coin-details.component';
 import { MyWalletsComponent } from './my-wallets/my-wallets.component';
-import { TransactionsComponent } from './transactions/transactions.component';
 import { PortofolioComponent } from './portofolio/portofolio.component';
-import { MarketCapitalComponent } from './market-capital/market-capital.component';
 
 import { ProfileComponent } from './apps/profile/profile.component';
 import { PostDetailsComponent } from './apps/post-details/post-details.component';
@@ -74,7 +72,6 @@ import { TypographyComponent } from './bootstrap/typography/typography.component
 import { GridComponent } from './bootstrap/grid/grid.component';
 
 
-import { NestableComponent } from './plugins/nestable/nestable.component';
 import { LightGalleryComponent } from './plugins/light-gallery/light-gallery.component';
 
 import { WidgetComponent } from './widget/widget.component';
@@ -117,9 +114,7 @@ const routes: Routes = [
 
                         {path: 'coin-details', component: CoinDetailsComponent},
                         {path: 'my-wallets', component: MyWalletsComponent},
-                        {path: 'transactions', component: TransactionsComponent},
                         {path: 'portofolio', component: PortofolioComponent},
-                        {path: 'market-capital', component: MarketCapitalComponent},
 
 
                         {path: 'post-details', component: PostDetailsComponent},
@@ -181,7 +176,6 @@ const routes: Routes = [
                         {path: 'ui-typography', component: TypographyComponent},
                         {path: 'ui-grid', component: GridComponent},
 
-                        {path: 'uc-nestable', component: NestableComponent},
                         {path: 'uc-lightgallery', component: LightGalleryComponent},
 
                         {path: 'widget-basic', component: WidgetComponent},
