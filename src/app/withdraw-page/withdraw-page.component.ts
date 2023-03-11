@@ -50,6 +50,7 @@ export class WithdrawPageComponent implements OnInit {
         break;
       default:
         this.initialFunds = 0;
+        break;
     };
    }
   withdraw(){

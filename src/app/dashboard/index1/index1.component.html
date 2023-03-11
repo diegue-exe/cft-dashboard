@@ -12,9 +12,9 @@
 
           <!-- {{ cuentas[0] | json }} -->
 
-            <div class="col-xl-5 col-lg-5 col-md-12 col-sm-12 col-12 d-flex justify-content-center">
+            <div class="col-xl-5 col-lg-5 col-md-12 col-sm-12 col-12">
               <div class="card">
-                <div class="card-body d-flex align-items-center">
+                <div class="card-body d-flex align-items-center mx-auto">
                         <div>
                           <h3 class="text-black">Winrate</h3>
                             <p class="mb-2 fs-13">
@@ -26,7 +26,7 @@
             </div>
             <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12">
               <div class="card">
-                <div class="card-body d-flex align-items-center">
+                <div class="card-body d-flex align-items-center mx-auto">
                         <div>
                           <h3 class="text-black">Average return</h3>
                             <p class="mb-2 fs-13">per trade</p>
@@ -38,7 +38,7 @@
             </div>
             <div class="col-xl-3 col-lg-3 col-md-12 col-sm-12 col-12">
               <div class="card">
-                <div class="card-body d-flex align-items-center">
+                <div class="card-body d-flex align-items-center mx-auto">
                         <div>
                           <h3 class="text-black">Total trades</h3>
                             <p class="mb-2 fs-13">Lifetime</p>
@@ -49,6 +49,17 @@
               </div>
             </div>
 
+            <!-- TODO hacer que salga cuando se cumplan las condiciones de que salga :D -->
+            <div *ngIf="false" class="col-12">
+              <div class="card text-white bg-success-light">
+                  <div class="card-header">
+                      <h5 class="card-title text-white">Congratulations! 🥳</h5>
+                  </div>
+                  <div class="card-body mb-0">
+                      <p class="card-text">You have completed the phase 1!</p>
+                  </div>
+              </div>
+          </div>
 
 
             <div class="col-xl-12 col-xxl-12">

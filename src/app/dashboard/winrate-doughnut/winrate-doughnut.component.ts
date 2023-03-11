@@ -56,7 +56,7 @@ export class WinrateDoughnutComponent implements OnInit {
         ]
       },
       options: {
-        aspectRatio:1.5,
+        aspectRatio:2,
         legend: {
           display: false
         }
